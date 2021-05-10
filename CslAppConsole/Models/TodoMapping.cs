@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
 namespace CslAppConsole.Models
 {
     public class TodoMapping : IEntityTypeConfiguration<Todo>

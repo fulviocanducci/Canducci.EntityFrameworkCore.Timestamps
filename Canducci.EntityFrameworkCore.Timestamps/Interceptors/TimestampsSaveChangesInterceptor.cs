@@ -1,5 +1,4 @@
-﻿using Canducci.EntityFrameworkCore.Timestamps.Internals;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
@@ -12,28 +11,42 @@ namespace Canducci.EntityFrameworkCore.Timestamps.Interceptors
 {
     public sealed class TimestampsSaveChangesInterceptor : SaveChangesInterceptor
     {
-        private Entries<ITimestamps> Entries { get; }
-        public TimestampsSaveChangesInterceptor()
+        private List<EntityEntry> GetEntityEntries(DbContextEventData eventData)
         {
-            Entries = new EntriesTimestamps();
+            if (eventData is null)
+            {
+                throw new ArgumentNullException(nameof(eventData));
+            }
+
+            return eventData
+                .Context
+                .ChangeTracker
+                .Entries()
+                .Where(w => w
+                    .Entity
+                    .GetType()
+                    .GetInterfaces()
+                    .Contains(typeof(ITimestamps))
+                )
+                .ToList();
         }
 
         private void Timestamps(DbContextEventData eventData)
         {
-            List<EntityEntry> entityEntries = Entries.GetEntityEntries(eventData);
+            List<EntityEntry> entityEntries = GetEntityEntries(eventData);
             if (entityEntries.Any())
             {
-                DateTime actual = DateTime.Now;
+                DateTime dateTimeNow = DateTime.Now;
                 foreach (var entity in entityEntries)
                 {
                     if (entity.State == EntityState.Added)
                     {
-                        entity.Property("CreatedAt").CurrentValue = actual;
-                        entity.Property("UpdatedAt").CurrentValue = actual;
+                        entity.Property(nameof(ITimestamps.CreatedAt)).CurrentValue = dateTimeNow;
+                        entity.Property(nameof(ITimestamps.UpdatedAt)).CurrentValue = dateTimeNow;
                     }
                     if (entity.State == EntityState.Modified)
                     {
-                        entity.Property("UpdatedAt").CurrentValue = actual;
+                        entity.Property(nameof(ITimestamps.UpdatedAt)).CurrentValue = dateTimeNow;
                     }
                 }
             }
