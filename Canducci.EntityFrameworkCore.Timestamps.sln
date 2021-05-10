@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canducci.EntityFrameworkCore.Timestamps", "Canducci.EntityFrameworkCore.Timestamps\Canducci.EntityFrameworkCore.Timestamps.csproj", "{921F2676-6F6F-4DE5-A7B0-753F32604E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslAppConsole", "CslAppConsole\CslAppConsole.csproj", "{EFD69859-075C-4EDE-BC68-F8BE96B5802B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{921F2676-6F6F-4DE5-A7B0-753F32604E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921F2676-6F6F-4DE5-A7B0-753F32604E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921F2676-6F6F-4DE5-A7B0-753F32604E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921F2676-6F6F-4DE5-A7B0-753F32604E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD69859-075C-4EDE-BC68-F8BE96B5802B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD69859-075C-4EDE-BC68-F8BE96B5802B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD69859-075C-4EDE-BC68-F8BE96B5802B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD69859-075C-4EDE-BC68-F8BE96B5802B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F962CA7-3366-41C6-B59D-3450898F6D4D}
+	EndGlobalSection
+EndGlobal
