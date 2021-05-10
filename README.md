@@ -1,0 +1,2 @@
+# Canducci.EntityFrameworkCore.Timestamps
+TimeStamps
