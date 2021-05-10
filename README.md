@@ -41,7 +41,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 }
 ```
 
-`OnModelCreating` mapping `class` example:
+* `OnModelCreating` mapping `class` example:
 
 ```Csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,4 +59,4 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 ## Example Application:
 
-[![Console](Console Application Example)](https://github.com/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps/tree/master/CslAppConsole)
+[Console Application Example](https://github.com/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps/tree/master/CslAppConsole)
