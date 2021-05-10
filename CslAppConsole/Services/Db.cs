@@ -8,6 +8,7 @@ namespace CslAppConsole.Services
         public Db()
         {
         }
+
         public DbSet<Todo> Todo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
