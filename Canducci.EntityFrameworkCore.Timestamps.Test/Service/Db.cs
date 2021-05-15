@@ -10,7 +10,7 @@ namespace Canducci.EntityFrameworkCore.Timestamps.Test.Service
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseInMemoryDatabase("DatabaseInMemory");
-            optionsBuilder.AddInterceptorITimestamps();
+            optionsBuilder.AddInterceptorTimestamps();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
