@@ -7,10 +7,13 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Timestamps CreatedAt UpdatedAt</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Timestamps CreatedAt UpdatedAt</Description>
+    <Description>Change method of AddInterceptorITimestamps to AddInterceptorTimestamps (wrong name)</Description>
     <Authors>fulviocanducci</Authors>
     <PackageReleaseNotes>Entity Framework Core With Timestamps (CreatedAt &amp;&amp; UpdatedAt)</PackageReleaseNotes>
     <PackageIcon>base-ico.png</PackageIcon>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <PackageProjectUrl>https://github.com/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

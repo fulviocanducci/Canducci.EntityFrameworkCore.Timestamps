@@ -16,7 +16,7 @@ PM> Install-Package Canducci.EntityFrameworkCore.Timestamps
 
 ## How to use?
 
-Declare o namespace `using Canducci.EntityFrameworkCore.Timestamps;` and implementation `class`, example:
+The namespace `using Canducci.EntityFrameworkCore.Timestamps;` and implementation `class`, example:
 
 ```Csharp
 public class Person : ITimestamps
@@ -28,16 +28,16 @@ public class Person : ITimestamps
 }
 ```
 
-In the configuration em `DbContext`, configure `AddInterceptorSoftDelete` is method extension:
+In the configuration em `DbContext`, configure `AddInterceptorTimestamps` (`Canducci.EntityFrameworkCore.Timestamps.Extensions`)  is method extension:
 
-* `.AddInterceptorITimestamps()`
+* `.AddInterceptorTimestamps()`
 
 `OnConfiguring` example:
 
 ```Csharp
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 {
-    optionsBuilder.AddInterceptorITimestamps();
+    optionsBuilder.AddInterceptorTimestamps();
 }
 ```
 
