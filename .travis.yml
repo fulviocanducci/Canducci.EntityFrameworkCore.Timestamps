@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 5.0.x
+dotnet: 5.0
 solution: Canducci.EntityFrameworkCore.Timestamps.sln
 script:
   - dotnet restore
