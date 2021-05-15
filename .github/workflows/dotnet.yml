@@ -26,5 +26,5 @@ jobs:
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secrets.repo_token }}
-        path-to-lcov: /home/runner/work/Canducci.EntityFrameworkCore.Timestamps/Canducci.EntityFrameworkCore.Timestamps/coverage/lcov.info
+        github-token: ${{ secrets.TOKEN_GITHUB }}
+        path-to-lcov: ${{ github.workspace }}/coverage/lcov.info
