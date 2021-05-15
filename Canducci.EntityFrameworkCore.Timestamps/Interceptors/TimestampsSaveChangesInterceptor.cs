@@ -21,10 +21,10 @@ namespace Canducci.EntityFrameworkCore.Timestamps.Interceptors
                 .ChangeTracker
                 .Entries()
                 .Where(w => w
-                .Entity
-                .GetType()
-                .GetInterfaces()
-                .Contains(typeof(ITimestamps))
+                    .Entity
+                    .GetType()
+                    .GetInterfaces()
+                    .Contains(typeof(ITimestamps))
                 )
                 .ToList();
         }
