@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 
 namespace Canducci.EntityFrameworkCore.Timestamps.Interceptors
 {
+    /// <summary>
+    /// class TimestampsSaveChangesInterceptor
+    /// </summary>
     public sealed class TimestampsSaveChangesInterceptor : SaveChangesInterceptor
     {
         private List<EntityEntry> GetEntityEntries(DbContextEventData eventData)
-        {
+        {            
             if (eventData is null)
             {
                 throw new ArgumentNullException(nameof(eventData));
