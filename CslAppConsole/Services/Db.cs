@@ -19,7 +19,7 @@ namespace CslAppConsole.Services
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source = db.sqlite")
-                .AddInterceptorITimestamps();
+                .AddInterceptorTimestamps();
 
         }
     }
