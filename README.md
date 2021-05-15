@@ -3,8 +3,6 @@
 [![NuGet](https://img.shields.io/nuget/v/Canducci.EntityFrameworkCore.Timestamps.svg?style=plastic&label=version)](https://www.nuget.org/packages/Canducci.EntityFrameworkCore.Timestamps/)
 [![NuGet](https://img.shields.io/nuget/dt/Canducci.EntityFrameworkCore.Timestamps.svg)](https://www.nuget.org/packages/Canducci.EntityFrameworkCore.Timestamps/)
 [![.NET](https://github.com/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps/actions/workflows/dotnet.yml)
-[![codecov](https://codecov.io/gh/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps/branch/master/graph/badge.svg?token=1OM869T0OZ)](https://codecov.io/gh/fulviocanducci/Canducci.EntityFrameworkCore.Timestamps)
-TimeStamps
 
 ## Package Installation (NUGET)
 
