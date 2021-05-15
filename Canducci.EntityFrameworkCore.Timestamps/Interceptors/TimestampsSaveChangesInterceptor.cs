@@ -15,21 +15,16 @@ namespace Canducci.EntityFrameworkCore.Timestamps.Interceptors
     public sealed class TimestampsSaveChangesInterceptor : SaveChangesInterceptor
     {
         private List<EntityEntry> GetEntityEntries(DbContextEventData eventData)
-        {            
-            if (eventData is null)
-            {
-                throw new ArgumentNullException(nameof(eventData));
-            }
-
+        {
             return eventData
                 .Context
                 .ChangeTracker
                 .Entries()
                 .Where(w => w
-                    .Entity
-                    .GetType()
-                    .GetInterfaces()
-                    .Contains(typeof(ITimestamps))
+                .Entity
+                .GetType()
+                .GetInterfaces()
+                .Contains(typeof(ITimestamps))
                 )
                 .ToList();
         }
